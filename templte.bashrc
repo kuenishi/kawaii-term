@@ -48,4 +48,5 @@ STIM="\[$(tput sitm)\]" # 斜線開始
 RTIM="\[$(tput ritm)\]" # 斜線終了
 BCC_T="\[$(tput setb 7)\]"
 WHOAMI="⚡ "
-export PS1="\[\$(tput sc; RIGHT_PRONPT; tput rc)\]$WHOAMI${BCC_T}${BOLD}${YELLOW}@${RESET} ${STIM}${CYAN}[\$(FREE_MEM)]${RESET}${RTIM} ${ULINE}${ORANGE}192.168.15.19${RESET}${EULINE} ${BOLD}${BLUE}=>${RESET}"
+export HOSTNAME=`hostname`
+export PS1="\[\$(tput sc; RIGHT_PRONPT; tput rc)\]$WHOAMI${BCC_T}${BOLD}${YELLOW}@${RESET} ${STIM}${CYAN}[\$(FREE_MEM)]${RESET}${RTIM} ${ULINE}${ORANGE}${HOSTNAME}${RESET}${EULINE}${BOLD}${BLUE}=>${RESET}"
